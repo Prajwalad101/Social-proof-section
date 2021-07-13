@@ -1,0 +1,49 @@
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+}
+
+#page-container {
+  box-sizing: border-box;
+  width: 70%;
+  height: 100vh;
+  padding: 5% 0 5% 0;
+  margin: 0% auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "title rated"
+    "review review";
+}
+
+.title-section {
+  grid-area: title;
+}
+
+.main-title {
+  font-size: 45px;
+  color: hsl(300, 43%, 22%);
+}
+
+.rated {
+  grid-area: rated;
+}
+
+.customer-review {
+  grid-area: review;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "customer-1 customer-2 customer-3";
+}
+
+.customer1 {
+  grid-area: customer1;
+}
+.customer2 {
+  grid-area: customer2;
+}
+.customer3 {
+  grid-area: customer3;
+}
