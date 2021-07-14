@@ -1,16 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Spartan", sans-serif;
   margin: 0;
 }
 
 #page-container {
-  box-sizing: border-box;
-  width: 70%;
-  height: 100vh;
+  width: 80%;
+  height: 98vh;
   padding: 5% 0 5% 0;
   margin: 0% auto 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.95fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "title rated"
@@ -24,26 +28,111 @@ body {
 .main-title {
   font-size: 45px;
   color: hsl(300, 43%, 22%);
+  padding-right: 20%;
+  margin-bottom: 10px;
 }
 
-.rated {
+.product-description {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  padding-right: 15%;
+}
+.rate-star-container {
+  margin-top: 30px;
   grid-area: rated;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.rates {
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 8px;
+  padding: 15px 0px 15px 0px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.rate1 {
+  margin-right: 100px;
+}
+
+.rate2 {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.rate3 {
+  margin-left: 100px;
+}
+
+.company-rates {
+  margin-right: 0;
+}
+
+.star {
+  margin: 0 45px 0 30px;
+}
+
+.star-icon {
+  padding-right: 10px;
+  color: rgb(197, 197, 90);
 }
 
 .customer-review {
   grid-area: review;
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "customer-1 customer-2 customer-3";
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.customers {
+  color: white;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 7px;
+  padding: 30px;
+  color: hsl(300, 24%, 96%);
 }
 
 .customer1 {
-  grid-area: customer1;
+  margin-bottom: 30px;
 }
 .customer2 {
-  grid-area: customer2;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .customer3 {
-  grid-area: customer3;
+  margin-right: 0;
+  margin-top: 30px;
+}
+
+.title-card-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 60px;
+  margin: 0 30px 10px 0;
+}
+
+.customer-name {
+  margin: 0;
+}
+
+.verified-buyer {
+  margin: 5px 0 0 0;
+  color: hsl(303, 10%, 53%);
+}
+
+.review {
+  font-size: 15px;
+  /* margin-bottom: 0; */
+  line-height: 1.5;
+  /* letter-spacing: 1px; */
+  color: hsl(300, 24%, 96%);
 }
