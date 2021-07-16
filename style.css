@@ -5,12 +5,11 @@
 }
 body {
   font-family: "Spartan", sans-serif;
-  margin: 0;
 }
 
 #page-container {
   width: 80%;
-  height: 98vh;
+  height: 100vh;
   padding: 5% 0 5% 0;
   margin: 0% auto 0 auto;
   display: grid;
@@ -36,6 +35,7 @@ body {
   color: hsl(303, 10%, 53%);
   font-weight: 500;
   padding-right: 15%;
+  padding-bottom: 10px;
 }
 .rate-star-container {
   margin-top: 30px;
@@ -83,9 +83,9 @@ body {
 .customer-review {
   grid-area: review;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .customers {
@@ -111,17 +111,13 @@ body {
 .title-card-section {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .profile-img {
   border-radius: 100%;
   width: 60px;
-  margin: 0 30px 10px 0;
-}
-
-.customer-name {
-  margin: 0;
+  margin: 0 30px 0 0;
 }
 
 .verified-buyer {
@@ -131,8 +127,106 @@ body {
 
 .review {
   font-size: 15px;
-  /* margin-bottom: 0; */
   line-height: 1.5;
-  /* letter-spacing: 1px; */
   color: hsl(300, 24%, 96%);
+}
+
+.attribution {
+  margin: 0 auto 0 auto;
+  width: 90%;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 988px) {
+  #page-container {
+    height: auto;
+    width: 80%;
+    padding: 10% 0 10% 0;
+    margin: 0 auto 0 auto;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title "
+      "rated"
+      "review";
+  }
+
+  .title-section {
+    text-align: center;
+  }
+
+  .main-title {
+    /* font-size: 45px; */
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .product-description {
+    padding: 0 20px 0 20px;
+  }
+
+  .rate-star-container {
+    padding-bottom: 20px;
+  }
+
+  .rates {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .rate1 {
+    margin-right: 0;
+  }
+
+  .rate2 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .rate3 {
+    margin-left: 0;
+  }
+
+  .star {
+    margin: 0 35px 0 35px;
+  }
+
+  .company-rates {
+    text-align: center;
+    margin-right: 0;
+    flex-basis: 235px;
+  }
+
+  .customer1 {
+    margin-bottom: 0;
+  }
+  .customer2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .customer3 {
+    margin-right: 0;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 507px) {
+  #page-container {
+    width: 90%;
+  }
+  .main-title {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .product-description {
+    padding-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  .star {
+    padding-bottom: 10px;
+  }
 }
